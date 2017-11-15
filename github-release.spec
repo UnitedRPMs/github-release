@@ -15,6 +15,7 @@ URL:            https://github.com/aktau/github-release
 Source:         https://github.com/aktau/github-release/archive/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
 
 BuildRequires:	golang
+BuildRequires:	git
 
 %description
 A small commandline app written in Go that allows you to easily create and 
@@ -25,6 +26,7 @@ attach files to those releases.
 %autosetup -n %{name}-%{commit0}
 
 %build
+export GOPATH=$PWD/.gopath
 make
 
 %install
