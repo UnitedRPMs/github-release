@@ -1,11 +1,11 @@
 %global debug_package %{nil}
 
-%global commit0 e7e522691586e11b4e722ca6de7ffd9f3bd56b66
+%global commit0 100e85543f51525ecafcfb5c9e96119b6dea0aa2
 %global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
 %global gver .git%{shortcommit0}
 
 Name:           github-release
-Version:        0.9.0
+Version:        0.10.0
 Release:    	1%{?gver}%{dist}
 Summary:        Small commandline app that allows you to easily create and delete releases of your projects on Github
 
@@ -41,6 +41,9 @@ make
 
 
 %changelog
+
+* Thu Jan 07 2021 David Va <davidva AT tuta DOT io> 0.10.0-1.git100e855
+- Updated to 0.10.0
 
 * Thu Oct 22 2020 David Va <davidva AT tuta DOT io> 0.9.0-1.gite7e5226
 - Updated to 0.9.0
